@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentist Information</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .card {
+            background-color: #f8f9fa; /* Light gray background color */
+            border: 1px solid #ced4da; /* Gray border */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .card-body {
+            padding: 40px; /* Increased padding */
+        }
+
+        .card-title {
+            color: #007bff; /* Blue title color */
+            font-size: 28px; /* Larger font size */
+            margin-bottom: 20px; /* Increased bottom margin */
+        }
+
+        .card-text {
+            font-size: 18px; /* Increased font size */
+            margin-bottom: 10px; /* Increased bottom margin */
+        }
+
+        .contact-info {
+            border-top: 1px solid #ced4da; /* Gray border on top of contact info */
+            padding-top: 20px; /* Increased padding on top of contact info */
+        }
+
+        .contact-info p {
+            margin-bottom: 5px; /* Reduced bottom margin for contact info */
+        }
+
+        .contact-info a {
+            color: #007bff; /* Blue color for contact links */
+        }
+
+        .contact-info a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            color: #0056b3; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body text-center">
+                <img src="image/dr1.jpg" alt="Dentist Photo" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
+                <h1 class="card-title">Dr. Sonali Yadav</h1>
+                <p class="card-text">Qualifications: Bachelor of Dental Surgery</p>
+                <p class="card-text">Specialization: Surgery</p>
+                <p class="card-text">Experience: 2 years</p>
+                <div class="contact-info">
+                    <p class="card-text">Contact Information: 1234556667</p>
+                    <p class="card-text">Email: <a href="mailto:Sonaliyadav26@gmail.com" style="color: #007bff;">example@example.com</a></p>
+                    <p class="card-text">Phone: <a href="tel:+123456789" style="color: #007bff;">+123 456 789</a></p>
+                </div>
+                <button class="btn btn-secondary" onclick="goBack()">Back</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

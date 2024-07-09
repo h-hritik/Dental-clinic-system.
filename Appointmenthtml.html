@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appointmentcss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Dental Clinic Appointment</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="home-button" onclick="window.location.href='mainpage.jsp'">
+        <i class="fa fa-home"></i> Home
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="specialisedhtml.html">Specialities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="patientdetailhtml.html">Patients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Payamentsystemhtml.html">Billing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacthtml.html">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="feedbackhtml.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="abouthtml.html">About</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<!-- Side Navigation Menu -->
+
+<div class="container">
+    <h1>Book an Appointment</h1>
+
+
+    <form action="appointmentServlet" method="post" onsubmit="return validateForm()">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time">Appointment Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="phone">Your Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="speciality">Select Speciality:</label>
+        <select id="speciality" name="speciality" required>
+            <option value="general">General Dentistry</option>
+            <option value="orthodontics">Orthodontics</option>
+            <option value="oralSurgery">Oral Surgery</option>
+            <option value="Teeth cleaning">Teeth cleaning</option>
+        </select>
+
+        <center>
+            <input type="submit" value="Book Appointment">
+        </center>
+    </form>
+</div>
+<button class="btn" onclick="goBack()">Go Back</button>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var date = document.getElementById("date").value;
+
+        if (!/^[a-zA-Z\s]*$/.test(name)) {
+            alert("Please enter a valid name with alphabets and spaces only.");
+            return false;
+        }
+
+        if (!/^\d{10}$/.test(phone)) {
+            alert("Please enter a 10-digit phone number.");
+            return false;
+        }
+
+        var currentDate = new Date();
+        var selectedDate = new Date(date);
+        var currentYear = currentDate.getFullYear();
+
+        if (selectedDate.getFullYear() < currentYear || selectedDate.getFullYear() < 2024) {
+            alert("Please select a date from 2024 or later.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>

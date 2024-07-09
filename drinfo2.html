@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentist Information</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .dentist-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .dentist-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card dentist-container">
+            <center>  <img src="image/dr2.jpg" alt="Dentist Photo" class="card-img-top dentist-photo"></center>
+            <div class="card-body">
+                <h1 class="card-title">Dr. Pooja Thakur</h1>
+                <p class="card-text">Qualifications: Bachelor of Dental surgery</p>
+                <p class="card-text">Specialization: Surgery</p>
+                <p class="card-text">Experience: 3 years</p>
+                <div class="contact-info">
+                    <p>Contact Information: 1234552327</p>
+                    <p>Email: <a href="mailto:poojathakur33@gmail.com">poojathakur33@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+1234552327">+123 455 2327</a></p>
+                </div>
+                <button class="btn btn-secondary" onclick="goBack()">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, for some functionalities) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

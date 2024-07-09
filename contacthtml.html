@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="contactcss.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="home-button" onclick="window.location.href='mainpage.jsp'">
+            <i class="fa fa-home"></i> 
+        </button>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p>Email: Maurya@dentalclinic.com</p>
+            <p>Phone: +911234567890 / 02225954497</p>
+        </div>
+        <div class="Location">
+            <p>LBS road near mangatram patrol pumb bhandup mumbai 400078</p>
+        </div>
+    </div>
+
+    <!-- Button for online face-to-face meeting -->
+    <div class="online-meeting">
+        <button onclick="startMeeting()">
+            <i class="fa fa-video-camera"></i> Start Online Meeting
+        </button>
+    </div>
+
+    <main>
+        <div>
+            <center>
+                <a href="map.html" class="fa fa-map-marker"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="https://twitteer.com/dcodeyt" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="https://api.whatsapp.com/send?phone=919324544634" class="fa fa-whatsapp"></a>
+            </center>
+        </div>
+    </main>
+
+    <script>
+        // Function to start the online meeting using Zoom
+        function startMeeting() {
+            // Replace 'YOUR_ZOOM_MEETING_LINK' with your actual Zoom meeting link
+            var zoomMeetingLink = 'YOUR_ZOOM_MEETING_LINK';
+            window.open(zoomMeetingLink, '_blank');
+        }
+    </script>
+</body>
+</html>

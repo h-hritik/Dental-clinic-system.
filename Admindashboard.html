@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Admindashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, Admin</h1>
+        <div class="dashboard-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="Adminpatientinfo.jsp" class="btn btn-primary btn-lg btn-block">
+                            <i class="fa fa-users" aria-hidden="true"></i> Patient
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="AdminView.jsp" class="btn btn-primary btn-lg btn-block">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i> Appointment
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="admin_input.jsp" class="btn btn-primary btn-lg btn-block">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Statistics
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="Adminfeedbackread.jsp" class="btn btn-primary btn-lg btn-block">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Feedback
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-secondary btn-lg btn-block" onclick="goBack()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Location</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Location</h1>
+    <div id="map"></div>
+
+    <button onclick="goBack()">Back</button>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of your business
+            var businessLocation = { lat: 19.1158473, lng: 72.9055279 }; // Example: New York City coordinates
+
+            // The map, centered at the business location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: businessLocation
+            });
+
+            // The marker, positioned at the business location
+            var marker = new google.maps.Marker({
+                position: businessLocation,
+                map: map,
+                title: 'Our Business Location'
+            });
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHsE5R2WtqJGe_qFAy7nIXiV8ZbHDKnms&callback=initMap"></script>
+    <!-- Replace YOUR_API_KEY with your actual Google Maps API Key -->
+</body>
+</html>
